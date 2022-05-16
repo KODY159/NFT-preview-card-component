@@ -1,0 +1,141 @@
+/* Font import */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap');
+
+/* Variable */
+:root {
+  /* text */
+  --white: hsl(0, 0%, 100%);
+  --Paragraph: hsl(215, 32%, 27%);
+  --Eth: hsl(178, 100%, 50%);
+
+  /* Background color */
+  --Container: hsl(216, 50%, 16%);
+  --Shadow: hsl(215, 62%, 10%);
+  --Background: hsl(217, 54%, 11%);
+}
+
+/* Set default of the browsers */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Body */
+body {
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Background);
+  min-height: 100vh;
+}
+
+
+
+/* Container */
+.container {
+  padding: 1.5rem;
+  max-width: 375px;
+  margin: 10rem auto;
+  border-radius: 15px;
+  background-color: var(--Container);
+  box-shadow: 0 40px 0 20px var(--Shadow);
+}
+.images {
+  position: relative;
+  align-self: center;
+}
+.images img {
+  opacity: 1;
+  display: block;
+  width: 325px;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  transition: .5s ease;
+}
+.images .eye {
+  position: absolute;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: .5s ease;
+}
+.Eye-size img {
+  width: 40px;
+  height: 40px;
+}
+
+
+/* hover activity*/
+.images:hover {
+  background-color: var(--Eth);
+  border-radius: 0.5rem
+}
+.images:hover>img {
+  opacity: 0.3;
+}
+.images:hover .eye {
+  opacity: 1;
+}
+
+
+/* Content */
+.content {
+  margin-top: 1rem;
+}
+.content>h3 {
+  color: var(--white);
+}
+.content>p {
+  margin-top: 1rem;
+  color: var(--Paragraph);
+}
+
+ul.list {
+  margin-top: 1rem;
+  list-style-type: none;
+}
+.list li {
+  float: left;
+  color: var(--Paragraph);
+}
+li.Eth-text {
+  color: var(--Eth);
+}
+li.Days-text {
+  float: right;
+}
+hr.line {
+  margin-top: 1.5rem;
+  border: 1px solid var(--Paragraph);
+}
+div.footer {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  color: var(--Paragraph);
+}
+.footer .Avatar {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  align-self: center;
+  border-radius: 50%;
+  background-color: white;
+}
+.Avatar>img {
+  width: 95%;
+  height: auto;
+  margin-top: 1px;
+}
+.footer>p {
+  margin-top: 10px;
+}
+.footer span {
+  color: var(--white);
+}
